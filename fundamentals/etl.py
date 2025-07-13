@@ -38,6 +38,7 @@ def transform(data: dict) -> pd.DataFrame:
     return df[["domains","country","web_pages","name"]]
 
 #%%
+# Load function
 def load(df:pd.DataFrame) -> None:
     """ Loads data into a sqlite database"""
     disk_engine = create_engine('sqlite:///my_lite_store.db')
